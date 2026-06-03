@@ -13,34 +13,54 @@ A web-based enterprise application built to streamline and manage bond trading a
 ## 🔄 System Workflow (RBAC Logic)
 This diagram illustrates how the system verifies user identity and splits functionalities based on permissions:
 
-## 🗄️ Database Schema (Relational Model)
+## 🗄️ Database Schema (Normalized Relational Design)
 
-The database structure is designed to isolate user credentials from financial profile data to maintain security and integrity.
+The database schema is structured based on the specific user requirements for Admins and Traders, supporting course management, attendance tracking, and certification.
 
-### 🔹 1. Users Table (Authentication & Roles)
+### 🔹 1. Users Table (Authentication & RBAC)
 | Column Name | Data Type | Key | Description |
 | :--- | :--- | :--- | :--- |
-| `user_id` | uuid | PK | Unique identifier for each user account |
-| `email` | varchar | | User email address |
-| `password_hash` | varchar | | Hashed password for security |
-| `role` | varchar | | Access level (e.g., 'Trader', 'Admin') |
-| `created_at` | timestamp | | Account creation timestamp |
+| `user_id` | uuid | PK | Unique identifier for the account |
+| `email` | varchar | | User email address used for login |
+| `password_hash` | varchar | | Password (National ID number for Traders initially) |
+| `role` | varchar | | System access tier ('admin' or 'trader') |
+| `created_at` | timestamp | | Account registration timestamp |
 
-### 🔹 2. Trader_Details Table (Profile Data)
+### 🔹 2. Traders Table (Trader Profiles & License Status)
 | Column Name | Data Type | Key | Description |
 | :--- | :--- | :--- | :--- |
-| `trader_id` | uuid | PK | Unique identifier for the trader profile |
-| `user_id` | uuid | FK | References `Users.user_id` |
-| `full_name` | varchar | | Trader's first and last name |
-| `company_name` | varchar | | Employing financial institution |
-| `license_no` | varchar | | Authorized bond trader license number |
+| `trader_id` | uuid | PK | Unique identifier for the trader |
+| `user_id` | uuid | FK | References `users.user_id` |
+| `citizen_id` | varchar(13) | | National Identification Number |
+| `full_name` | varchar | | Trader's full name |
+| `license_no` | varchar | | Bond trader license number |
+| `status` | varchar | | Profile status (e.g., Active, Expiring, Expired) |
+| `expired_date` | date | | License/Status expiration date for notifications |
 
-### 🔹 3. Bond_Transactions Table (Transaction Logs)
+### 🔹 3. Courses Table (Training Course Management)
 | Column Name | Data Type | Key | Description |
 | :--- | :--- | :--- | :--- |
-| `transaction_id` | uuid | PK | Unique identifier for the transaction |
-| `trader_id` | uuid | FK | References `Trader_Details.trader_id` |
-| `bond_code` | varchar | | Identified code of the bond |
-| `amount` | numeric | | Transaction value / volume |
-| `status` | varchar | | Transaction state (e.g., Pending, Approved) |
-| `updated_by` | uuid | FK | References `Users.user_id` (Admin action) |
+| `course_id` | uuid | PK | Unique identifier for the training course |
+| `course_name` | varchar | | Name of the course |
+| `description` | text | | Course outline and description |
+| `is_approved` | boolean | | Approval status controlled by Admin |
+| `created_by` | uuid | FK | References `users.user_id` (Admin creator) |
+
+### 🔹 4. Course_Enrollments Table (Registration & Attendance Checking)
+| Column Name | Data Type | Key | Description |
+| :--- | :--- | :--- | :--- |
+| `enrollment_id` | uuid | PK | Unique identifier for the registration |
+| `trader_id` | uuid | FK | References `traders.trader_id` |
+| `course_id` | uuid | FK | References `courses.course_id` |
+| `enroll_date` | timestamp | | Date of course registration |
+| `attendance_status`| boolean | | Actual attendance verification (True = Attended) |
+
+### 🔹 5. Certificates Table (Certification Issuance)
+| Column Name | Data Type | Key | Description |
+| :--- | :--- | :--- | :--- |
+| `certificate_id`| uuid | PK | Unique identifier for the certificate |
+| `trader_id` | uuid | FK | References `traders.trader_id` |
+| `course_id` | uuid | FK | References `courses.course_id` |
+| `certificate_no`| varchar | | Official certificate tracking number |
+| `issued_date` | date | | Date the certificate was awarded |
+| `file_url` | varchar | | Cloud storage URL for the certificate file |
