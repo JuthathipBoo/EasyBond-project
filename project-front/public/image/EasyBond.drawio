@@ -1,0 +1,72 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="-xPOI05U-NNI1j6XR6sI">
+    <mxGraphModel dx="1030" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NJj9KFY0X5XCFMDstdjl-14" edge="1" parent="1" source="NJj9KFY0X5XCFMDstdjl-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=15;" target="NJj9KFY0X5XCFMDstdjl-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NJj9KFY0X5XCFMDstdjl-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fontSize=15;" value="&lt;font&gt;เริ่มต้น&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="170" x="325" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="NJj9KFY0X5XCFMDstdjl-15" edge="1" parent="1" source="NJj9KFY0X5XCFMDstdjl-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=15;" target="NJj9KFY0X5XCFMDstdjl-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NJj9KFY0X5XCFMDstdjl-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" value="ผู้ใช้งานเข้าสู่ระบบ (Login)&lt;div&gt;กรอก username / password&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="290" x="265" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="NJj9KFY0X5XCFMDstdjl-16" edge="1" parent="1" source="NJj9KFY0X5XCFMDstdjl-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=15;" target="NJj9KFY0X5XCFMDstdjl-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NJj9KFY0X5XCFMDstdjl-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" value="ระบบตรวจสอบสิทธิ์ (RBAC)&lt;div&gt;เช็ก Role ในฐานข้อมูล&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="290" x="265" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="NJj9KFY0X5XCFMDstdjl-12" edge="1" parent="1" source="NJj9KFY0X5XCFMDstdjl-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;" target="NJj9KFY0X5XCFMDstdjl-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NJj9KFY0X5XCFMDstdjl-13" edge="1" parent="1" source="NJj9KFY0X5XCFMDstdjl-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=15;" target="NJj9KFY0X5XCFMDstdjl-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NJj9KFY0X5XCFMDstdjl-8" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=15;" value="Role ?&lt;div&gt;ตรวจสอบบทบาท&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="170" x="325" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="NJj9KFY0X5XCFMDstdjl-20" edge="1" parent="1" source="NJj9KFY0X5XCFMDstdjl-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="NJj9KFY0X5XCFMDstdjl-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NJj9KFY0X5XCFMDstdjl-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" value="Trader" vertex="1">
+          <mxGeometry height="65" width="120" x="110" y="432.5" as="geometry" />
+        </mxCell>
+        <mxCell id="NJj9KFY0X5XCFMDstdjl-21" edge="1" parent="1" source="NJj9KFY0X5XCFMDstdjl-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="NJj9KFY0X5XCFMDstdjl-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="630" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NJj9KFY0X5XCFMDstdjl-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" value="Admin" vertex="1">
+          <mxGeometry height="65" width="120" x="570" y="432.5" as="geometry" />
+        </mxCell>
+        <mxCell id="NJj9KFY0X5XCFMDstdjl-22" edge="1" parent="1" source="NJj9KFY0X5XCFMDstdjl-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="NJj9KFY0X5XCFMDstdjl-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NJj9KFY0X5XCFMDstdjl-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" value="ผู้ใช้ทำรายการ&lt;div&gt;บันทึก &amp;amp; อัปเดตสถานะในฐานข้อมูล&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="290" x="265" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="NJj9KFY0X5XCFMDstdjl-24" edge="1" parent="1" source="NJj9KFY0X5XCFMDstdjl-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="NJj9KFY0X5XCFMDstdjl-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NJj9KFY0X5XCFMDstdjl-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" value="อัปเดตสถานะสำเร็จ&lt;div&gt;ระบบยืนยันการบันทึกข้อมูล&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="290" x="265" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="NJj9KFY0X5XCFMDstdjl-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fontSize=15;" value="&lt;font&gt;สิ้นสุดกระบวนการ&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="170" x="325" y="850" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
